@@ -319,6 +319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grapplePoint: {fileID: 124597175}
   grapple: {fileID: 669389766}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &124597175
 GameObject:
   m_ObjectHideFlags: 0
