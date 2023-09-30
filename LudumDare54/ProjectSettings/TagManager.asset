@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Environment
     uniqueID: 3195965523
+    locked: 0
+  - name: UI
+    uniqueID: 1721587517
     locked: 0
