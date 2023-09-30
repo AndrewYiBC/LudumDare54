@@ -297,6 +297,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e264b8118a0f445857ecd3f81a7de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow0: {fileID: 808076165}
+  arrow1: {fileID: 890795511}
+  arrow2: {fileID: 490086165}
+  arrow3: {fileID: 989673645}
 --- !u!1 &142360957
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +710,7 @@ GameObject:
   - component: {fileID: 490086166}
   - component: {fileID: 490086167}
   m_Layer: 0
-  m_Name: ArrowBotLeft
+  m_Name: Arrow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,7 +1012,7 @@ GameObject:
   - component: {fileID: 808076166}
   - component: {fileID: 808076167}
   m_Layer: 0
-  m_Name: ArrowTopRight
+  m_Name: Arrow0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1310,7 +1314,7 @@ GameObject:
   - component: {fileID: 890795512}
   - component: {fileID: 890795513}
   m_Layer: 0
-  m_Name: ArrowTopLeft
+  m_Name: Arrow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1583,7 +1587,7 @@ GameObject:
   - component: {fileID: 989673646}
   - component: {fileID: 989673647}
   m_Layer: 0
-  m_Name: ArrowBotRight
+  m_Name: Arrow3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2029,8 +2033,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 890795512}
   - {fileID: 808076166}
+  - {fileID: 890795512}
   - {fileID: 490086166}
   - {fileID: 989673646}
   m_Father: {fileID: 58912599}
