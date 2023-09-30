@@ -6,10 +6,11 @@ using TMPro;
 public class ViewCanvas : MonoBehaviour
 {
     // Constants
-    private const float DEFAULT_DEPTH = 3000f;
+    // private const float DEFAULT_DEPTH = 3000f;
 
     // Variables
-    [SerializeField] private TextMeshProUGUI depth;
+    [SerializeField] private TextMeshProUGUI xValue;
+    [SerializeField] private TextMeshProUGUI yValue;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class ViewCanvas : MonoBehaviour
 
     void Update()
     {
-        depth.text = (DEFAULT_DEPTH - transform.position.y * 10f).ToString("F1") + " meters";
+        xValue.text = (transform.position.x * 10f).ToString("F1") + " meters";
+        yValue.text = (transform.position.y * 10f).ToString("F1") + " meters";
     }
 }
