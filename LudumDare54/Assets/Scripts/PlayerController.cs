@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] float speed = 7f;
+    [SerializeField] float speed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         float inputX = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector2(inputX * speed, 0);
+        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
     }
 
     void OnEnable()
