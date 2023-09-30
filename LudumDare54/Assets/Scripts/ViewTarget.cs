@@ -45,46 +45,62 @@ public class ViewTarget : MonoBehaviour
 
     void Update()
     {
-        target = GameObject.FindWithTag("Target");
+        if (target == null)
+        {
+            target = GameObject.FindWithTag("Target");
+        }
         if (target != null)
         {
-            distance = Vector3.Distance(transform.position, target.transform.position);
-            if (distance <= dClose && dStatus != 0)
+            if (target.activeInHierarchy)
             {
-                dStatus = 0;
-                if (currentCoroutine != null)
+                distance = Vector3.Distance(transform.position, target.transform.position);
+                if (distance <= dClose && dStatus != 0)
                 {
-                    StopCoroutine(currentCoroutine);
-                    ResetColors();
+                    dStatus = 0;
+                    if (currentCoroutine != null)
+                    {
+                        StopCoroutine(currentCoroutine);
+                        ResetColors();
+                    }
+                    currentCoroutine = StartCoroutine(Flash(0));
                 }
-                currentCoroutine = StartCoroutine(Flash(0));
-            }
-            else if (distance > dClose && distance <= dMid && dStatus != 1)
-            {
-                dStatus = 1;
-                if (currentCoroutine != null)
+                else if (distance > dClose && distance <= dMid && dStatus != 1)
                 {
-                    StopCoroutine(currentCoroutine);
-                    ResetColors();
+                    dStatus = 1;
+                    if (currentCoroutine != null)
+                    {
+                        StopCoroutine(currentCoroutine);
+                        ResetColors();
+                    }
+                    currentCoroutine = StartCoroutine(Flash(1));
                 }
-                currentCoroutine = StartCoroutine(Flash(1));
-            }
-            else if (distance > dMid && distance <= dFar && dStatus != 2)
-            {
-                dStatus = 2;
-                if (currentCoroutine != null)
+                else if (distance > dMid && distance <= dFar && dStatus != 2)
                 {
-                    StopCoroutine(currentCoroutine);
-                    ResetColors();
+                    dStatus = 2;
+                    if (currentCoroutine != null)
+                    {
+                        StopCoroutine(currentCoroutine);
+                        ResetColors();
+                    }
+                    currentCoroutine = StartCoroutine(Flash(2));
                 }
-                currentCoroutine = StartCoroutine(Flash(2));
+                else if (distance > dFar)
+                {
+                    dStatus = 3;
+                    if (currentCoroutine != null)
+                    {
+                        StopCoroutine(currentCoroutine);
+                        currentCoroutine = null;
+                        ResetColors();
+                    }
+                }
             }
-            else if (distance > dFar)
+            else
             {
-                dStatus = 3;
                 if (currentCoroutine != null)
                 {
                     StopCoroutine(currentCoroutine);
+                    currentCoroutine = null;
                     ResetColors();
                 }
             }
