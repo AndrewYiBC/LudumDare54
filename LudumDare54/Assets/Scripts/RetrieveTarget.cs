@@ -7,8 +7,8 @@ public class RetrieveTarget : MonoBehaviour
     // Variables
     // GameObjects
     private GameObject target = null;
-    [SerializeField] private GameObject grapplePoint;
-    [SerializeField] private GameObject grapple;
+    [SerializeField] private GameObject grapplingHook;
+    [SerializeField] private GameObject grapplingText;
 
     // Components
     private Rigidbody2D rb;
@@ -18,9 +18,12 @@ public class RetrieveTarget : MonoBehaviour
     private int moveTimes = 20;
 
     // Target
-    [SerializeField] private LayerMask targetLayer;
     private float checkRadius = 0.5f;
     private bool isRetrieved = false;
+
+    // Text
+    private float displayDuration = 1f;
+    private bool isInDisplay = false;
 
     void Start()
     {
@@ -43,7 +46,13 @@ public class RetrieveTarget : MonoBehaviour
                     rb.constraints = RigidbodyConstraints2D.FreezeAll;
                     StartCoroutine(GrapplingAnimation());
                 }
-                
+            }
+            else
+            {
+                if (!isInDisplay)
+                {
+                    StartCoroutine(DisplayText());
+                }
             }
         }
     }
@@ -62,14 +71,24 @@ public class RetrieveTarget : MonoBehaviour
 
         for (int i = 0; i < moveTimes; i++)
         {
-            grapple.transform.position = grapple.transform.position + deltaMove;
+            grapplingHook.transform.position = grapplingHook.transform.position + deltaMove;
             yield return new WaitForSeconds(deltaTime);
         }
 
         yield return new WaitForSeconds(1f);
         target.SetActive(false);
-        grapple.SetActive(false);
+        grapplingHook.SetActive(false);
 
+        yield return 0;
+    }
+
+    private IEnumerator DisplayText()
+    {
+        isInDisplay = true;
+        grapplingText.SetActive(true);
+        yield return new WaitForSeconds(displayDuration);
+        grapplingText.SetActive(false);
+        isInDisplay = false;
         yield return 0;
     }
 }
