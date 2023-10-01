@@ -9,8 +9,8 @@ public class AnglerFish : MonoBehaviour
     private Rigidbody2D rb;
     // Move
     [SerializeField] private float speed;
-    private float xMin = -60f;
-    private float xMax = 60f;
+    private float xMin = -75f;
+    private float xMax = 75f;
 
     void Start()
     {
