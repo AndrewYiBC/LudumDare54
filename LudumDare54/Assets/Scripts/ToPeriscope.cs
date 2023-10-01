@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ToPeriscope : MonoBehaviour
 {
-    public GameObject player;
-    Vector2 playerPos;
-    Vector2 periscopePos;
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform leftEnd;
+    [SerializeField] private Transform rightEnd;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,14 @@ public class ToPeriscope : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-        periscopePos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-
-        if (Input.GetKeyDown(KeyCode.E) && (Vector2.Distance(playerPos, periscopePos) < 3))
+        if (Input.GetKeyDown(KeyCode.E) && IsWithinRange())
         {
             SceneManager.LoadScene("UnderwaterView");
         }
+    }
+
+    private bool IsWithinRange()
+    {
+        return (player.position.x >= leftEnd.position.x && player.position.x <= rightEnd.position.x);
     }
 }
