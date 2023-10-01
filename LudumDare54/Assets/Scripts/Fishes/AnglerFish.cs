@@ -15,14 +15,14 @@ public class AnglerFish : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = -transform.right * speed;
+        rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * speed, 0f);
     }
 
     void Update()
     {
         if (isOutOfRange())
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = Vector2.zero;
             // gameObject.SetActive(false);
             Destroy(gameObject);
         }
