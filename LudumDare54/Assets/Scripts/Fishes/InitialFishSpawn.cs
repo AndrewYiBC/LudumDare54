@@ -34,7 +34,7 @@ public class InitialFishSpawn : MonoBehaviour
             int fishType = Random.Range(0, fishPrefabs.Length);
             float x = Random.Range(xMinLeft, xMaxLeft);
             float y = Random.Range(yMin, yMax);
-            Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
+            // Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
         }
     }
 
@@ -45,7 +45,7 @@ public class InitialFishSpawn : MonoBehaviour
             int fishType = Random.Range(0, fishPrefabs.Length);
             float x = Random.Range(xMinRight, xMaxRight);
             float y = Random.Range(yMin, yMax);
-            Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
+            // Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
         }
     }
 }
