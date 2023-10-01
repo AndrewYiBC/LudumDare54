@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PortholeToggle : MonoBehaviour
+public class ToPorthole : MonoBehaviour
 {
     public GameObject PortholeCamera;
     public GameObject PlayerSprite;
@@ -23,17 +23,10 @@ public class PortholeToggle : MonoBehaviour
         playerPos = new Vector2(PlayerSprite.transform.position.x, PlayerSprite.transform.position.y);
         portholePos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
 
-        if (Input.GetKeyDown(KeyCode.E) && (Vector2.Distance(playerPos, portholePos) < 3) )
+        if (Input.GetKeyDown(KeyCode.E) && (viewing || (Vector2.Distance(playerPos, portholePos) < 3) ))
         {
-            if (viewing)
-            {
-                ExitPorthole();
-            }
-            else
-            {
-                EnterPorthole();
-                Invoke("SwitchScene", 1.8f);
-            }
+            EnterPorthole();
+            Invoke("SwitchScene", 1.8f);
         }
     }
 
@@ -43,13 +36,6 @@ public class PortholeToggle : MonoBehaviour
         PortholeCamera.SetActive(true);
         PlayerSprite.SetActive(false);
         viewing = true;
-    }
-
-    private void ExitPorthole()
-    {
-        PortholeCamera.SetActive(false);
-        PlayerSprite.SetActive(true);
-        viewing = false;
     }
 
     private void SwitchScene()

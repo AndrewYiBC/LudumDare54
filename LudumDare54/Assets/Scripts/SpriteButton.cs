@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpriteButton : MonoBehaviour
 {
+    public GameObject player;
+    [SerializeField] private float distance = 3f;
+    Vector2 playerPos;
+    Vector2 objPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +19,13 @@ public class SpriteButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+        objPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+
+        if (Input.GetKeyDown(KeyCode.E) && (Vector2.Distance(playerPos, objPos) < distance))
+        {
+            Debug.Log("Clicked");
+        }
     }
 
     void OnEnable()
@@ -26,10 +38,10 @@ public class SpriteButton : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("Clicked");
-    }
+    //void OnMouseDown()
+    //{
+    //    Debug.Log("Clicked");
+    //}
 
     void OnCollisionEnter2D(Collision2D collision)
     {

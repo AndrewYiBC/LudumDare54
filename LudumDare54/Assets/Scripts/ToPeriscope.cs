@@ -21,9 +21,7 @@ public class ToPeriscope : MonoBehaviour
         playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
         periscopePos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
 
-        Debug.Log(Vector2.Distance(playerPos, periscopePos));
-
-        if (Input.GetKeyDown(KeyCode.E) && (Vector2.Distance(playerPos, periscopePos) < 4))
+        if (Input.GetKeyDown(KeyCode.E) && (Vector2.Distance(playerPos, periscopePos) < 3))
         {
             SceneManager.LoadScene("UnderwaterView");
         }
