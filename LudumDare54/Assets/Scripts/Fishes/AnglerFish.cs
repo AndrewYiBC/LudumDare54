@@ -16,7 +16,7 @@ public class AnglerFish : MonoBehaviour
     {
         speed = Random.Range(1.5f, 2.3f);
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * speed, 0f);
+        rb.velocity = new Vector2(Mathf.Sign(transform.localScale.x) * speed, 0f);
     }
 
     void Update()
