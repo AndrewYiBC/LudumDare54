@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnglerFish : MonoBehaviour
+public class JellyFish : MonoBehaviour
 {
     // Variables
     // Components
@@ -15,7 +15,7 @@ public class AnglerFish : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * speed, 0f);
+        rb.velocity = new Vector2(Mathf.Sign(transform.localScale.x) * speed, 0f);
     }
 
     void Update()
