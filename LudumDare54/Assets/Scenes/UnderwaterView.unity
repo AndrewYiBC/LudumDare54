@@ -764,8 +764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f676ada68b9f24c954c6228174e2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefabs: []
-  spawnAmountEach: 10
+  fishPrefabs:
+  - {fileID: 3888751231443253403, guid: d4e11710d9d9cb14ebdbd6d2064bfaca, type: 3}
+  spawnAmountEach: 3
 --- !u!1 &333748446
 GameObject:
   m_ObjectHideFlags: 0
