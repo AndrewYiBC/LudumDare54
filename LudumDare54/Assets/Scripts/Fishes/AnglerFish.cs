@@ -8,12 +8,13 @@ public class AnglerFish : MonoBehaviour
     // Components
     private Rigidbody2D rb;
     // Move
-    [SerializeField] private float speed;
+    private float speed;
     private float xMin = -75f;
     private float xMax = 75f;
 
     void Start()
     {
+        speed = Random.Range(1.5f, 2.3f);
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * speed, 0f);
     }
