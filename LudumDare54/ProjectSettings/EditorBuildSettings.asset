@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PortholeView.unity
     guid: 3622c908550f0475ea38de6b14502e10
+  - enabled: 1
+    path: Assets/Scenes/UnderwaterView.unity
+    guid: a8bb1b496b692a24d85e1545db4a4661
   m_configObjects: {}
