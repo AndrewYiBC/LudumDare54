@@ -7,6 +7,7 @@ public class ToPorthole : MonoBehaviour
 {
     [SerializeField] private GameObject[] events;
     [SerializeField] private GameObject windowWall;
+    [SerializeField] private GameObject instructionCanvas;
     [SerializeField] private GameObject journalCanvas;
     [SerializeField] private GameObject portholeCamera;
     [SerializeField] private GameObject player;
@@ -43,6 +44,7 @@ public class ToPorthole : MonoBehaviour
     private void EnterPorthole()
     {
         player.SetActive(false);
+        instructionCanvas.SetActive(false);
         journalCanvas.SetActive(false);
         portholeCamera.SetActive(true);
         StartCoroutine(PortholeEvent());
@@ -85,6 +87,7 @@ public class ToPorthole : MonoBehaviour
         Globals.portholeCount++;
         yield return new WaitForSeconds(2f);
         journalCanvas.SetActive(true);
+        instructionCanvas.SetActive(true);
         player.SetActive(true);
         isInView = false;
         yield return 0;
