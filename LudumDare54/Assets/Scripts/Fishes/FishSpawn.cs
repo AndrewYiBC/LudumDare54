@@ -7,7 +7,7 @@ public class FishSpawn : MonoBehaviour
     // Variables
     [SerializeField] private GameObject[] fishPrefabs;
     [SerializeField] private int spawnAmountEach;
-    private float spawnInterval = 5f;
+    private float spawnInterval = 8f;
 
     private float xMinLeft = -45f;
     private float xMaxLeft = -15f;
