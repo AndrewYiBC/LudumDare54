@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ToPorthole : MonoBehaviour
 {
+    [SerializeField] private GameObject windowWall;
+    [SerializeField] private GameObject journalCanvas;
     [SerializeField] private GameObject portholeCamera;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform leftEnd;
@@ -22,7 +24,7 @@ public class ToPorthole : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && IsWithinRange())
         {
             EnterPorthole();
-            Invoke("SwitchScene", 1.8f);
+            // Invoke("SwitchScene", 1.8f);
         }
     }
 
@@ -31,14 +33,31 @@ public class ToPorthole : MonoBehaviour
         return (player.transform.position.x >= leftEnd.position.x && player.transform.position.x <= rightEnd.position.x);
     }
 
+    
     private void EnterPorthole()
     {
-        portholeCamera.SetActive(true);
         player.SetActive(false);
+        journalCanvas.SetActive(false);
+        portholeCamera.SetActive(true);
+        StartCoroutine(PortholeEvent());
     }
 
+    /*
     private void SwitchScene()
     {
         SceneManager.LoadScene("PortholeView");
+    }
+    */
+
+    // Coroutines
+    private IEnumerator PortholeEvent()
+    {
+        yield return new WaitForSeconds(2f);
+        windowWall.SetActive(true);
+        yield return new WaitForSeconds(5f);    // Event happens here
+        windowWall.SetActive(false);
+        portholeCamera.SetActive(false);
+        journalCanvas.SetActive(true);
+        player.SetActive(true);
     }
 }
