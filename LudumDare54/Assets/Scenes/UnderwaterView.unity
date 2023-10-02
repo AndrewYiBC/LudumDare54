@@ -765,8 +765,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishPrefabs:
-  - {fileID: 7782595296098711985, guid: e8839ec402572794994c9662d027fe06, type: 3}
+  - {fileID: 3888751231443253403, guid: d4e11710d9d9cb14ebdbd6d2064bfaca, type: 3}
   - {fileID: 6222781145063696359, guid: 2ff3ea89bcff0cf48878ce596d6e99e4, type: 3}
+  - {fileID: 6573815116304770833, guid: ef524507ad1ff1f419a08af4904d1c83, type: 3}
+  - {fileID: 7782595296098711985, guid: e8839ec402572794994c9662d027fe06, type: 3}
   spawnAmountEach: 2
 --- !u!1 &333748446
 GameObject:
