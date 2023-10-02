@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishSpawn : MonoBehaviour
+public class SpawnFish : MonoBehaviour
 {
     // Variables
     [SerializeField] private GameObject[] fishPrefabs;
@@ -15,8 +15,8 @@ public class FishSpawn : MonoBehaviour
     private float xMaxRight = 45f;
     private float xLeft = -60f;
     private float xRight = 60f;
-    private float yMin = -15f;
-    private float yMax = 15f;
+    private float yMin = -17.5f;
+    private float yMax = 17.5f;
 
     void Start()
     {
