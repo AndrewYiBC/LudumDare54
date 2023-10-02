@@ -767,7 +767,7 @@ MonoBehaviour:
   fishPrefabs:
   - {fileID: 3888751231443253403, guid: d4e11710d9d9cb14ebdbd6d2064bfaca, type: 3}
   - {fileID: 6222781145063696359, guid: 2ff3ea89bcff0cf48878ce596d6e99e4, type: 3}
-  spawnAmountEach: 3
+  spawnAmountEach: 2
 --- !u!1 &333748446
 GameObject:
   m_ObjectHideFlags: 0

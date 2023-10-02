@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitialFishSpawn : MonoBehaviour
+public class FishSpawn : MonoBehaviour
 {
     // Variables
     [SerializeField] private GameObject[] fishPrefabs;
     [SerializeField] private int spawnAmountEach;
-    private float xMinLeft = -35f;
+    private float spawnInterval = 5f;
+
+    private float xMinLeft = -45f;
     private float xMaxLeft = -15f;
     private float xMinRight = 15f;
-    private float xMaxRight = 35f;
-
+    private float xMaxRight = 45f;
+    private float xLeft = -60f;
+    private float xRight = 60f;
     private float yMin = -15f;
     private float yMax = 15f;
 
@@ -19,6 +22,8 @@ public class InitialFishSpawn : MonoBehaviour
     {
         InitialSpawnLeft();
         InitialSpawnRight();
+        StartCoroutine(PeriodicalSpawnLeft());
+        StartCoroutine(PeriodicalSpawnRight());
     }
 
     void Update()
@@ -49,6 +54,33 @@ public class InitialFishSpawn : MonoBehaviour
             Vector3 tempScale = currentFish.transform.localScale;
             tempScale.x *= -1;
             currentFish.transform.localScale = tempScale;
+        }
+    }
+
+    private IEnumerator PeriodicalSpawnLeft()
+    {
+        while (true)
+        {
+            int fishType = Random.Range(0, fishPrefabs.Length);
+            float x = xLeft;
+            float y = Random.Range(yMin, yMax);
+            Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    private IEnumerator PeriodicalSpawnRight()
+    {
+        while (true)
+        {
+            int fishType = Random.Range(0, fishPrefabs.Length);
+            float x = xRight;
+            float y = Random.Range(yMin, yMax);
+            GameObject currentFish = Instantiate(fishPrefabs[fishType], new Vector3(x, y), Quaternion.identity);
+            Vector3 tempScale = currentFish.transform.localScale;
+            tempScale.x *= -1;
+            currentFish.transform.localScale = tempScale;
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 }
