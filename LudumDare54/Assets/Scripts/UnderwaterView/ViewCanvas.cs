@@ -25,8 +25,8 @@ public class ViewCanvas : MonoBehaviour
 
     void Update()
     {
-        xValue.text = (transform.position.x * 10f).ToString("F1") + " meters";
-        yValue.text = (transform.position.y * 10f).ToString("F1") + " meters";
+        xValue.text = (transform.position.x * 10f).ToString("F1");
+        yValue.text = (transform.position.y * 10f).ToString("F1");
         if (transform.position.x > xLimit || transform.position.x < -xLimit)
         {
             if (!is_xLimit)

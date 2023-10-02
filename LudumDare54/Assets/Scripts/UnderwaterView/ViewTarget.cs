@@ -24,9 +24,9 @@ public class ViewTarget : MonoBehaviour
     private float[] tLow = { 0.5f, 1.5f, 2.5f };
 
     // Distances
-    private float dFar = 25f;
-    private float dMid = 15f;
-    private float dClose = 5f;
+    private float dFar = 40f;
+    private float dMid = 25f;
+    private float dClose = 10f;
 
     // Distance status
     private int dStatus = 3;

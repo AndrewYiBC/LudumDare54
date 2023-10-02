@@ -11,9 +11,17 @@ public class AnglerFish : MonoBehaviour
     private float speed;
     private float xMin = -75f;
     private float xMax = 75f;
+    // Scale
+    private float minScale = 0.8f;
+    private float maxScale = 1.2f;
 
     void Start()
     {
+        Vector3 currentScale = transform.localScale;
+        float scaleChange = Random.Range(minScale, maxScale);
+        currentScale.x = currentScale.x * scaleChange;
+        currentScale.y = currentScale.y * scaleChange;
+        transform.localScale = currentScale;
         speed = Random.Range(1.5f, 2.3f);
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(Mathf.Sign(transform.localScale.x) * speed, 0f);
