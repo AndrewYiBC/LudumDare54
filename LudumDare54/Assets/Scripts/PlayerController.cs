@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject playerRelated;
     private Animator anim;
     private Rigidbody2D rb;
+    
     [SerializeField] private float speed = 5f;
     private float inputX;
     private bool isFacingRight = true;
@@ -14,7 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        rb = playerRelated.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
