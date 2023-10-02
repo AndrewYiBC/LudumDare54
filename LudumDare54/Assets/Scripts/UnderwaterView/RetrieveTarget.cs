@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RetrieveTarget : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class RetrieveTarget : MonoBehaviour
         target.SetActive(false);
         grapplingHook.SetActive(false);
 
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Submarine");
         yield return 0;
     }
 
