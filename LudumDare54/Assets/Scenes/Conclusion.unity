@@ -182,6 +182,7 @@ MonoBehaviour:
   - (In your final hazy moments you smile.)
   - (You are free.)
   anim: {fileID: 954277076}
+  creature: {fileID: 1594688226}
 --- !u!1 &157490286
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +899,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292167518}
   m_CullTransparentMesh: 1
+--- !u!1 &1594688226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2815917133028235565, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+  m_PrefabInstance: {fileID: 2042074999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1696480982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1278,67 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 136723504}
   m_SourcePrefab: {fileID: 100100000, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+--- !u!1001 &2042074999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752709159905264798, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815917133028235565, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_Name
+      value: Creature
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815917133028235565, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62c16d276e5d15c4e8d8d6b915893d75, type: 3}
 --- !u!1 &2111606715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6515727942476129172, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
@@ -1286,3 +1353,4 @@ SceneRoots:
   - {fileID: 157490289}
   - {fileID: 954277080}
   - {fileID: 1759068423}
+  - {fileID: 2042074999}

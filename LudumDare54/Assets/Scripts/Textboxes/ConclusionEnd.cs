@@ -10,6 +10,7 @@ public class ConclusionEnd : MonoBehaviour
     [SerializeField] string[] text;
     private int i;
     public Animator anim;
+    public GameObject creature;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class ConclusionEnd : MonoBehaviour
             }
             else
             {
+                creature.SetActive(true);
                 anim.SetBool("FinishDialogue", true);
             }
         }
