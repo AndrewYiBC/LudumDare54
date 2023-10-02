@@ -328,6 +328,58 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &613071018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6936358809052574791, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+  m_PrefabInstance: {fileID: 1226853375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1065376154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6515727942476129172, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+  m_PrefabInstance: {fileID: 1226853375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1179573331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 627299424207802441, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+  m_PrefabInstance: {fileID: 1226853375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1179573332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179573331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89549e22362c432a8f1aa7d8eee702f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 1065376154}
+  tmp: {fileID: 613071018}
+  text:
+  - I was five years old when something in the waters saved me from death.
+  - I am 23 now, and that childish fantasy has yet to relinquish its grasp on me.
+  - What should have been a traumatic experience for any other child was instead
+    for me the beginning of a lifelong obsession with the ocean.
+  - "Books, classes, degrees\u2014I burned through them like a man on fire, finally
+    making a name for myself as a prodigious oceanographer."
+  - So, when I managed to stumble my way into a once-in-a-lifetime opportunity, a
+    solo research trip to christen a state-of-the-art self-piloting submersible,
+    I couldn't resist.
+  - The technicians ensured me that it was all perfectly safe.
+  - Precaution after precaution were placed, checked and rechecked, worst-case scenarios
+    already thought of and curbed.
+  - But then it struck.
+  - Now, I'm stuck down here with only the deep sea creatures as company as I sink
+    deeper and deeper with each passing second.
+  - I must find a way back.
 --- !u!1001 &1226853375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 627299424207802441, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
       propertyPath: m_Name
       value: Textbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 682753414103747533, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 682753414103747533, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
       propertyPath: text.Array.size
@@ -498,10 +554,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 290
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 682753414103747533, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 627299424207802441, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1179573332}
   m_SourcePrefab: {fileID: 100100000, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
