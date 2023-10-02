@@ -64,7 +64,7 @@ public class ToPorthole : MonoBehaviour
         GameObject fish = events[eventIndex];
         fish.SetActive(true);
         rb = fish.GetComponent<Rigidbody2D>();
-        if (eventIndex != 0)
+        if (eventIndex == 0 || eventIndex == 3)
         {
             yield return new WaitForSeconds(15f);
         }
