@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     {
         if (Globals.portholeCount >= Globals.portholeRequired && Globals.periscopeCount >= Globals.periscopeRequired && Globals.pipeFixed && Globals.wallFixed && Globals.antennaFixed)
         {
-            FinishLevel();
+            StartCoroutine(FinishLevel());
         }
     }
 
