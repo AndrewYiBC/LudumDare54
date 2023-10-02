@@ -13,18 +13,25 @@ public class Antenna : MonoBehaviour
 
     void Start()
     {
-
+        if (Globals.antennaFixed)
+        {
+            gameObject.SetActive(false);
+            FixedAntenna.SetActive(true);
+        }
     }
 
     void Update()
     {
-        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+        if (!Globals.antennaFixed)
         {
-            isFixed = true;
-            Globals.itemCount--;
-            Globals.antennaFixed = true;
-            gameObject.SetActive(false);
-            FixedAntenna.SetActive(true);
+            if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+            {
+                isFixed = true;
+                Globals.itemCount--;
+                Globals.antennaFixed = true;
+                gameObject.SetActive(false);
+                FixedAntenna.SetActive(true);
+            }
         }
     }
 

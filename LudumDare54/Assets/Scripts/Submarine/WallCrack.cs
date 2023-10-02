@@ -13,18 +13,25 @@ public class WallCrack : MonoBehaviour
 
     void Start()
     {
-        
+        if (Globals.wallFixed)
+        {
+            gameObject.SetActive(false);
+            Wall.SetActive(true);
+        }
     }
 
     void Update()
     {
-        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+        if (!Globals.wallFixed)
         {
-            isFixed = true;
-            Globals.itemCount--;
-            Globals.wallFixed = true;
-            gameObject.SetActive(false);
-            Wall.SetActive(true);
+            if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+            {
+                isFixed = true;
+                Globals.itemCount--;
+                Globals.wallFixed = true;
+                gameObject.SetActive(false);
+                Wall.SetActive(true);
+            }
         }
     }
 

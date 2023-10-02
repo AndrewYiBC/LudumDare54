@@ -13,18 +13,25 @@ public class Pipe : MonoBehaviour
 
     void Start()
     {
-
+        if (Globals.pipeFixed)
+        {
+            gameObject.SetActive(false);
+            FixedPipe.SetActive(true);
+        }
     }
 
     void Update()
     {
-        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+        if (!Globals.pipeFixed)
         {
-            isFixed = true;
-            Globals.itemCount--;
-            Globals.pipeFixed = true;
-            gameObject.SetActive(false);
-            FixedPipe.SetActive(true);
+            if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
+            {
+                isFixed = true;
+                Globals.itemCount--;
+                Globals.pipeFixed = true;
+                gameObject.SetActive(false);
+                FixedPipe.SetActive(true);
+            }
         }
     }
 
