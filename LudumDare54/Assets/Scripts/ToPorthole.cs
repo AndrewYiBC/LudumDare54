@@ -15,6 +15,7 @@ public class ToPorthole : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     private Rigidbody2D rb;
     private AudioSource soundEffect;
+    private bool isInView = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,9 @@ public class ToPorthole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && IsWithinRange())
+        if (Input.GetKeyDown(KeyCode.E) && IsWithinRange() && !isInView)
         {
+            isInView = true;
             EnterPorthole();
             // Invoke("SwitchScene", 1.8f);
         }
@@ -80,7 +82,10 @@ public class ToPorthole : MonoBehaviour
 
         windowWall.SetActive(false);
         portholeCamera.SetActive(false);
+        yield return new WaitForSeconds(2f);
         journalCanvas.SetActive(true);
         player.SetActive(true);
+        isInView = false;
+        yield return 0;
     }
 }
