@@ -340,6 +340,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Textbox
       objectReference: {fileID: 0}
+    - target: {fileID: 682753414103747533, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+      propertyPath: text.Array.data[0]
+      value: I was five years old when I believed something in the waters saved me
+        from death.
+      objectReference: {fileID: 0}
+    - target: {fileID: 682753414103747533, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
+      propertyPath: text.Array.data[1]
+      value: I am 23 now, and that childish fantasy has yet to relinquish its grasp
+        on me.
+      objectReference: {fileID: 0}
     - target: {fileID: 782246607216768239, guid: 953680fad6e7b4e95a87d811df791b17, type: 3}
       propertyPath: m_Camera
       value: 
