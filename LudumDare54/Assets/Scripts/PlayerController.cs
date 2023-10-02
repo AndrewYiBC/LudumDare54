@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*
     void OnEnable()
     {
         GameObject[] otherObjects = GameObject.FindGameObjectsWithTag("Activity");
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
             Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
+    */
 
     private void Flip()
     {
