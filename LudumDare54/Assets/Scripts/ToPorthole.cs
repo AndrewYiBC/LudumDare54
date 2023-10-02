@@ -82,6 +82,7 @@ public class ToPorthole : MonoBehaviour
 
         windowWall.SetActive(false);
         portholeCamera.SetActive(false);
+        Globals.portholeCount++;
         yield return new WaitForSeconds(2f);
         journalCanvas.SetActive(true);
         player.SetActive(true);

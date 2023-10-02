@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Antenna : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform leftEnd;
+    [SerializeField] private Transform rightEnd;
+
     [SerializeField] GameObject FixedAntenna;
     private bool isFixed = false;
 
@@ -14,14 +18,18 @@ public class Antenna : MonoBehaviour
 
     void Update()
     {
-        if (!isFixed)
+        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
         {
-            if (Globals.pipeFixed)
-            {
-                isFixed = true;
-                gameObject.SetActive(false);
-                FixedAntenna.SetActive(true);
-            }
+            isFixed = true;
+            Globals.itemCount--;
+            Globals.antennaFixed = true;
+            gameObject.SetActive(false);
+            FixedAntenna.SetActive(true);
         }
+    }
+
+    private bool IsWithinRange()
+    {
+        return (player.transform.position.x >= leftEnd.position.x && player.transform.position.x <= rightEnd.position.x);
     }
 }

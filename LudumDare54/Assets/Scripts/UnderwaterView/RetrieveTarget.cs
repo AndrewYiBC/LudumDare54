@@ -80,6 +80,8 @@ public class RetrieveTarget : MonoBehaviour
         target.SetActive(false);
         grapplingHook.SetActive(false);
 
+        Globals.periscopeCount++;
+        Globals.itemCount++;
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Submarine");
         yield return 0;

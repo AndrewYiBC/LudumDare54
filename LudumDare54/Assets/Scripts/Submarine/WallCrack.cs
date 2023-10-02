@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WallCrack : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform leftEnd;
+    [SerializeField] private Transform rightEnd;
+
     [SerializeField] GameObject Wall;
     private bool isFixed = false;
 
@@ -14,14 +18,18 @@ public class WallCrack : MonoBehaviour
 
     void Update()
     {
-        if (!isFixed)
+        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
         {
-            if (Globals.wallFixed)
-            {
-                isFixed = true;
-                gameObject.SetActive(false);
-                Wall.SetActive(true);
-            }
+            isFixed = true;
+            Globals.itemCount--;
+            Globals.wallFixed = true;
+            gameObject.SetActive(false);
+            Wall.SetActive(true);
         }
+    }
+
+    private bool IsWithinRange()
+    {
+        return (player.transform.position.x >= leftEnd.position.x && player.transform.position.x <= rightEnd.position.x);
     }
 }
