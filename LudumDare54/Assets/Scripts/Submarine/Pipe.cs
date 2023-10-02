@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform leftEnd;
+    [SerializeField] private Transform rightEnd;
+
     [SerializeField] GameObject FixedPipe;
     private bool isFixed = false;
 
@@ -14,14 +18,18 @@ public class Pipe : MonoBehaviour
 
     void Update()
     {
-        if (!isFixed)
+        if (!isFixed && Input.GetKeyDown(KeyCode.E) && IsWithinRange() && Globals.itemCount > 0)
         {
-            if (Globals.pipeFixed)
-            {
-                isFixed = true;
-                gameObject.SetActive(false);
-                FixedPipe.SetActive(true);
-            }
+            isFixed = true;
+            Globals.itemCount--;
+            Globals.pipeFixed = true;
+            gameObject.SetActive(false);
+            FixedPipe.SetActive(true);
         }
+    }
+
+    private bool IsWithinRange()
+    {
+        return (player.transform.position.x >= leftEnd.position.x && player.transform.position.x <= rightEnd.position.x);
     }
 }

@@ -19,8 +19,18 @@ public class JournalUpdate : MonoBehaviour
 
     void Update()
     {
-        TaskPorthole.text = Globals.portholeCount.ToString();
-        TaskPeriscope.text = Globals.periscopeCount.ToString();
+        int count1 = Globals.portholeCount;
+        if (count1 > Globals.portholeRequired)
+        {
+            count1 = Globals.portholeRequired;
+        }
+        TaskPorthole.text = "(" + count1.ToString() + "/" + Globals.portholeRequired.ToString() + ")";
+        int count2 = Globals.periscopeCount;
+        if (count2 > Globals.periscopeRequired)
+        {
+            count2 = Globals.periscopeRequired;
+        }
+        TaskPeriscope.text = "(" + count2.ToString() + "/" + Globals.periscopeRequired.ToString() + ")";
         if (Globals.pipeFixed)
         {
             TaskPipes.text = "Done!";
@@ -29,7 +39,7 @@ public class JournalUpdate : MonoBehaviour
         {
             TaskWall.text = "Done!";
         }
-        if (Globals.pipeFixed)
+        if (Globals.antennaFixed)
         {
             TaskAntenna.text = "Done!";
         }

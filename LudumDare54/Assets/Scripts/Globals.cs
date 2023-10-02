@@ -10,4 +10,7 @@ public static class Globals
     public static bool pipeFixed = false;
     public static bool wallFixed = false;
     public static bool antennaFixed = false;
+
+    public static int portholeRequired = 3;
+    public static int periscopeRequired = 3;
 }
