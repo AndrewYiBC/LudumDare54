@@ -143,17 +143,44 @@ MonoBehaviour:
   textbox: {fileID: 2111606715}
   tmp: {fileID: 787682571}
   text:
-  - Finally!
-  - 'After days of effort I have returned the submersible to working order. '
-  - All I can do is stare out of the porthole and wait patiently for some sign that
-    the antenna successfully transmitted my situation back to the surface.
+  - (Finally! After days of effort you had returned the submersible back to working
+    order.)
+  - (With no immediate threats having roused you from your sleep, you walk over to
+    check on the gauges.)
+  - "(It\u2019s almost routine now, as silly as that may sound in such a situation.)"
+  - (You lean back and stretch.)
+  - (All you can do is stare out of the porthole and wait patiently for some sign
+    that the antenna successfully transmitted your calls for help back to the surface,
+    or that they had finally realized that you had been out much longer than anticipated.)
+  - (Either way, your fate was out of your hands now, for better or for worse.)
   - Wait... What's that?
-  - During my time down here I have become used to strange warped fish swimming past
-    me.
-  - But this? This looks man-made.
-  - No... it can't be...
-  - Yes!
-  - Finally I'm free...
+  - "(Leaning into the porthole\u2019s dome, you look out into the black ocean. Something
+    flits in the corner of your eye.)"
+  - One of the fishes?
+  - No.
+  - (During your time down here you had become used to strange warped fish swimming
+    past.)
+  - (If anything, it had been quite exciting to get a glimpse at creatures which
+    had yet to be documented.)
+  - (But this? This was something else. Something bigger.)
+  - What the hell?
+  - (A face. A face appears and stares at you.)
+  - (Your blood runs cold.)
+  - "(And then\u2026 you smile.)"
+  - (Oh how long had you waited for this moment? To finally gaze upon that which
+    eluded you for so long.)
+  - (A beauty so indescribable it could drive one to madness.)
+  - (But you?)
+  - (You were perfectly sane.)
+  - (Ever so amazingly sane and alive.)
+  - (The creature stares at you, issuing a command without uttering a single word.)
+  - (But you know.)
+  - (You understand.)
+  - Of Course.
+  - (You oblige, opening the porthole. Water rushes in and you are ripped away from
+    the submersible, tumbling in the darkness, no longer confined.)
+  - (In your final hazy moments you smile.)
+  - (You are free.)
   anim: {fileID: 954277076}
 --- !u!1 &157490286
 GameObject:

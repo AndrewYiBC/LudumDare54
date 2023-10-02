@@ -448,22 +448,28 @@ MonoBehaviour:
   textbox: {fileID: 1065376154}
   tmp: {fileID: 613071018}
   text:
-  - I was five years old when something in the waters saved me from death.
-  - I am 23 now, and that childish fantasy has yet to relinquish its grasp on me.
-  - What should have been a traumatic experience for any other child was instead
-    for me the beginning of a lifelong obsession with the ocean.
-  - "Books, classes, degrees\u2014I burned through them like a man on fire, finally
-    making a name for myself as a prodigious oceanographer."
-  - So, when I managed to stumble my way into a once-in-a-lifetime opportunity, a
-    solo research trip to christen a state-of-the-art self-piloting submersible,
-    I couldn't resist.
-  - The technicians ensured me that it was all perfectly safe.
-  - Precaution after precaution were placed, checked and rechecked, worst-case scenarios
-    already thought of and curbed.
-  - But then it struck.
-  - Now, I'm stuck down here with only the deep sea creatures as company as I sink
-    deeper and deeper with each passing second.
-  - I must find a way back.
+  - When I close my eyes, I can still see it.
+  - Blue, deep blue. Dark, rich blue verging on black.
+  - Beneath the waves I am tossed and turned, smears of light and darkness below
+    and above, with no way to distinguish above from below.
+  - They drag me down, lower and lower into the depths, and I see the sky. Liquid
+    night.
+  - I was five years old when I almost drowned.
+  - hat should have been a traumatic experience for any other child was instead for
+    me the beginning of a lifelong obsession.
+  - I threw myself into anything and everything that could further my understanding
+    of those blue waters, making a name for myself as a prodigious oceanographer.
+  - There was no creature I could not name, no underwater environment I could not
+    recognize.
+  - And yet, my hunger for new discoveries was never once was sated.
+  - "So, when I managed to stumble my way into a one-in-a-lifetime opportunity\u2014a
+    solo research trip to christen a state of the art self-piloting submersible\u2014of
+    course I jumped on the offer, not caring what sorts of dangers were signed away
+    in the contract\u2019s fine print."
+  - "The technicians ensured me that it was all perfectly safe, precaution after
+    precaution was placed, checked and rechecked, worst-case scenarios already thought
+    of and curbed. Nothing could\u2013no\u2013would go wrong."
+  - And yet, like always, the ocean had other ideas.
 --- !u!1001 &1226853375
 PrefabInstance:
   m_ObjectHideFlags: 0
